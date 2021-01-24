@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import {Route} from 'react-router-dom'
-import {Button} from 'antd'
+import Loading from './components/Loading'
+// import Home from './components/Home'
 
-const App = () => {
+const Home = lazy(() => import("./components/Home"))
+
+function App() {
   return (
     <>
-      <Button type="primary">hello react!</Button>
+      <Suspense fallback={<Loading/>}>
+        <Route path="/" component={Home}/>
+      </Suspense>
     </>
   )
 }
