@@ -1,9 +1,10 @@
 import React from 'react'
-import { Button } from 'antd'
+import "./style.css"
 
 const Home = props => {
   return (
-    <Button type="primary">hello react!</Button>
+    <div className="body-padding">
+    </div>
   )
 }
 

@@ -1,0 +1,10 @@
+.avatar-box {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+.avatar-name {
+  font-size: 3vw;
+}
+.avatar-description {
+  font-size: 1.5vw;
+}
