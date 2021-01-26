@@ -1,6 +1,8 @@
 .see-more {
   color: #4792e6;
-  cursor: pointer;
+}
+.see-more:hover {
+  color: #83b6f1;
 }
 .article-title {
   overflow: hidden;

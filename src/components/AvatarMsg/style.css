@@ -14,7 +14,6 @@
 .avatar-name {
   color: #666;
   font-size: 2.5vw;
-  cursor: pointer;
 }
 .avatar-name:hover {
   color: #4792e6;

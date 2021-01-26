@@ -1,6 +1,7 @@
 body {
   min-width: 650px;
   background-color: rgba(187, 222, 255, 0.3)!important;
+  cursor: url('../images/carrot.png') 0 2, default;
 }
 .body-padding {
   margin: 30px 12%;
