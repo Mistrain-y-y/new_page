@@ -1,0 +1,11 @@
+.slider-img {
+  display: inline;
+  height: 100%;
+}
+.slider-single-box {
+  height: 300px;
+  line-height: 300px;
+  color: #fff;
+  background-color: #4792e6;
+  text-align: center;
+}

@@ -1,0 +1,9 @@
+.see-more {
+  color: #4792e6;
+  cursor: pointer;
+}
+.article-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

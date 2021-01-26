@@ -1,10 +1,21 @@
 .avatar-box {
   padding-bottom: 25px;
+  margin-bottom: 25px;
   border-bottom: 1px solid #eee;
+  background-color: transparent;
 }
-.avatar-name {
-  font-size: 3vw;
+.avatar-msg {
+  padding-top: 15px;
 }
 .avatar-description {
+  color: #444;
   font-size: 1.5vw;
+}
+.avatar-name {
+  color: #666;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+.avatar-name:hover {
+  color: #4792e6;
 }

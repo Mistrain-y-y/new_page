@@ -1,4 +1,10 @@
-
+body {
+  min-width: 650px;
+  background-color: rgba(187, 222, 255, 0.3)!important;
+}
 .body-padding {
-  padding: 30px 12%;
+  margin: 30px 12%;
+  padding: 25px 5%;
+  background-color: #fff;
+  border-radius: 1%;
 }

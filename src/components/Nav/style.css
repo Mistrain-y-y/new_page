@@ -1,7 +1,23 @@
 .light {
   background-color: #fff;
 }
+.header-vertical {
+  height: 66px;
+  line-height: 66px;
+}
 .icon-dino {
   height: 35px;
   margin: 0 30px;
+}
+.nav-item {
+  display: inline-block;
+  height: 100%;
+  padding: 0 20px;
+  margin: 0 10px;
+  color: #666;
+}
+.nav-item:hover,
+.active {
+  color: #4792e6;
+  border-bottom: 2px solid #4792e6;
 }
