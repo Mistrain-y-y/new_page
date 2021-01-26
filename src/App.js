@@ -7,8 +7,8 @@ import Foot from './components/Foot'
 
 const Home = lazy(() => import("./pages/Home"))
 const About = lazy(() => import("./pages/About"))
-const Compose = lazy(() => import("./pages/Compose"))
 const Blog = lazy(() => import("./pages/Blog"))
+const Article = lazy(() => import("./components/Article"))
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
       <Suspense fallback={<Loading/>}>
         <Route path="/" exact component={Home}/>
         <Route path="/blog" component={Blog}/>
-        <Route path="/compose" component={Compose}/>
+        <Route path="/blog/detail/:id" component={Article}/>
         <Route path="/about" component={About}/>
       </Suspense>
       </div>

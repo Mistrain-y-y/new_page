@@ -2,6 +2,11 @@ import React from 'react'
 import './style.css'
 import {withRouter, NavLink} from 'react-router-dom'
 import iconDino from '../../static/images/icon-dino.png'
+import {
+  HomeOutlined,
+  HighlightOutlined,
+  ContactsOutlined
+} from '@ant-design/icons';
 
 const Nav = props => {
   return (
@@ -13,10 +18,9 @@ const Nav = props => {
               title="To home page"
               className="icon-dino"/>
           </a>
-        <NavLink className="nav-item" to="/" exact>Home</NavLink>
-        <NavLink className="nav-item" to="/blog">Blog</NavLink>
-        <NavLink className="nav-item" to="/compose">Compose</NavLink>
-        <NavLink className="nav-item" to="/about">About</NavLink>
+        <NavLink className="nav-item" to="/" exact><HomeOutlined className="icon-font-style"/>Home</NavLink>
+        <NavLink className="nav-item" to="/blog"><HighlightOutlined className="icon-font-style"/>Blog</NavLink>
+        <NavLink className="nav-item" to="/about"><ContactsOutlined className="icon-font-style"/>About</NavLink>
     </header>
   )
 }
