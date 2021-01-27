@@ -1,10 +1,11 @@
-import { Layout } from 'antd';
+import { Layout } from 'antd'
+import './style.css'
 
-const { Footer } = Layout;
+const { Footer } = Layout
 
 const Foot = () => {
   return (
-    <Footer style={{backgroundColor: "transparent", textAlign: 'center' }}>2021 Created by Mistrain</Footer>
+    <Footer className="foot">2021 Created by Mistrain</Footer>
   )
 }
 

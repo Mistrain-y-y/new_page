@@ -17,8 +17,8 @@ const App = () => {
       <div className="body-padding">
       <Suspense fallback={<Loading/>}>
         <Route path="/" exact component={Home}/>
-        <Route path="/blog" component={Blog}/>
-        <Route path="/blog/detail/:id" component={Article}/>
+        <Route path="/blog" exact component={Blog}/>
+        <Route path="/blog/detail" component={Article}/>
         <Route path="/about" component={About}/>
       </Suspense>
       </div>
