@@ -1,6 +1,8 @@
 
 # 烟雨的个人博客项目
 
+> 请访问 [恐龙吃萝北！http://mistrain.top](http://mistrain.top)
+
 ## 文件目录
 
 ### server node后台
