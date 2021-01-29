@@ -4,6 +4,10 @@
   border-bottom: 1px solid #eee;
   background-color: transparent;
 }
+.avatar-img {
+  width: 100%;
+  height: 100%;
+}
 .avatar-msg {
   padding-top: 15px;
 }

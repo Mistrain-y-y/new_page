@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import {Avatar, Row, Col} from 'antd'
+import {Row, Col} from 'antd'
 import {withRouter} from 'react-router-dom'
 import Calen from './Calen'
 
@@ -14,19 +14,12 @@ const AvatarMsg = props => {
     <div className="avatar-box">
       <Row>
         <Col span={6}>
-          <Avatar
-            shape="square"
-            className="col-6"
+          <img
+            alt="avatar img"
+            className="col-6 avatar-img"
             src="https://s3.ax1x.com/2021/01/25/sOPFaj.jpg"
             title="A blue dinosaur who want to be a front-end engineer!"
-            size={{
-            xs: 80,
-            sm: 100,
-            md: 130,
-            lg: 180,
-            xl: 180,
-            xxl: 180
-          }}/>
+          />
         </Col>
         <Col span={6}>
           <div className="avatar-msg col-6">
