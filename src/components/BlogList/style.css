@@ -1,0 +1,13 @@
+.list-img {
+  width: 150px;
+}
+@media screen and (max-width: 576px) {
+  .list-img {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .list-img {
+    width: 225px;
+  }
+}

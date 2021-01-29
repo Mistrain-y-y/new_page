@@ -1,11 +1,19 @@
 body {
-  min-width: 650px;
+  min-width: 375px;
   background-color: rgba(187, 222, 255, 0.3)!important;
   cursor: url('../images/carrot.png') 0 2, default;
 }
 .body-padding {
-  margin: 30px 12%;
-  padding: 25px 5%;
+  margin: 30px 10%;
+  padding: 25px 4%;
   background-color: #fff;
   border-radius: 10px;
+}
+@media screen and (max-width: 450px) {
+  .body-padding {
+    margin: 30px 4%;
+    padding: 20px 4%;
+    background-color: #fff;
+    border-radius: 10px;
+  }
 }

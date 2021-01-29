@@ -5,13 +5,13 @@ import {Descriptions, Row, Col} from 'antd'
 const Author = () => {
   return (
     <div className="about-box">
-      <h1>About the author</h1>
+      <h2>About the author</h2>
       <Row>
       <Col span={8}>
       <img className="author-img" title="you can connect me!" src="https://s3.ax1x.com/2021/01/25/sOPFaj.jpg" alt="author"/>
       </Col>
       <Col span={16}>
-      <Descriptions layout="vertical" labelStyle={{fontSize: "20px", color: "#aaa", padding: "20px 50px"}} contentStyle={{color: "#666", padding: "0 50px"}}>
+      <Descriptions layout="vertical" labelStyle={{fontSize: "16px", color: "#aaa", padding: "10px 50px 0 50px"}} contentStyle={{color: "#666", paddingLeft: "50px"}}>
         <Descriptions.Item label="Name">Mistrain</Descriptions.Item>
         <Descriptions.Item label="QQ">1053401058</Descriptions.Item>
         <Descriptions.Item label="Address">Changsha, Hunan</Descriptions.Item>

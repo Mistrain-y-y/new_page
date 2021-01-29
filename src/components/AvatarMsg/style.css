@@ -5,8 +5,8 @@
   background-color: transparent;
 }
 .avatar-img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: auto
 }
 .avatar-msg {
   padding-top: 15px;

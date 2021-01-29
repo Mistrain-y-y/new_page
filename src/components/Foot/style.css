@@ -8,3 +8,15 @@
   height: 16px;
   margin: -4px 7px 0 0;
 }
+
+@media screen and (max-width: 450px) {
+  .foot {
+    font-size: 12px;
+  }
+  .police-icon {
+    width: 10.5px;
+    height: 12px;
+    margin: -4px 7px 0 0;
+    font-size: 12px;
+  }
+}

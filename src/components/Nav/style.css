@@ -1,15 +1,18 @@
 .light {
   background-color: #fff;
 }
+
 .header-vertical {
   height: 66px;
   line-height: 66px;
 }
+
 .icon-dino {
   height: 35px;
   width: 162px;
   margin: 0 30px;
 }
+
 .nav-item {
   display: inline-block;
   height: 100%;
@@ -17,11 +20,35 @@
   margin: 0 10px;
   color: #666;
 }
+
+@media screen and (max-width: 585px) {
+  .icon-dino {
+    height: 25px;
+    width: 116px;
+    margin: 0 10px;
+  }
+
+  .nav-item {
+    padding: 0 10px;
+    margin: 0 5px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .nav-item {
+    padding: 0 8px;
+    margin: 0 5px;
+    font-size: 12px;
+  }
+}
+
 .nav-item:hover,
 .active {
   color: #4792e6;
   border-bottom: 2px solid #4792e6;
 }
+
 .icon-font-style {
   font-size: 16px;
   margin-right: 5px;
