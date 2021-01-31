@@ -3,7 +3,7 @@ import "./style.css"
 import { List, Avatar } from 'antd';
 
 const listData = [{// 数据
-    href: '/blog/detail',
+    href: '/blog/detail/a01',
     time: "2020-10-1",
     title: `如何实现bilibili最新头部景深效果~炫酷`,
     avatar: 'https://s3.ax1x.com/2021/01/25/sOPFaj.jpg',

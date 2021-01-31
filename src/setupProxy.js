@@ -4,7 +4,8 @@ const {
 
 module.exports = function (app) {
   app.use(
-    '/',
+    // '/',
+    '/blog/page',
     createProxyMiddleware({
       target: 'http://localhost:3030',
       changeOrigin: true
