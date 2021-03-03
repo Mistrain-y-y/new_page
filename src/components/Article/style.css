@@ -1,8 +1,9 @@
-.article-img {
+img.article-img {
   width: 100%;
 }
 .article-title-box {
   margin-bottom: 10px;
+  box-shadow: 0 1px 0 #eee;
 }
 .article-author-msg {
   margin-right: 10px;
@@ -19,4 +20,15 @@ pre {
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
   white-space: pre-wrap;
- }
+  background-color: rgba(100, 100, 100, 0.05);
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 15px 25px;
+}
+textarea {
+  border: none;
+  outline: none;
+  padding: 15px;
+  background-color: rgba(100, 100, 100, 0.05);
+  border-radius: 5px;
+}

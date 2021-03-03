@@ -1,0 +1,123 @@
+<div class="article-title-box">
+  <h1>JS 命令式 声明式 函数式 编程?</h1>
+  <span class="article-author-msg">Mistrain</span>
+  <span class="article-author-msg">2020-12-05</span>
+  <span class="article-author-msg"><a
+      href="https://blog.csdn.net/javaMistrain/article/details/110726545" target="_blank"
+      rel="noreferrer" nofollow>查看CSDN原文</a></span>
+</div>
+<p>——烟雨仔的读书笔记</p>
+<h3 class="article-h3">1. 命令式 和 声明式 是啥?</h3>
+<p>命令式和声明式是按照编程风格来划分的.</p>
+<p>声明式有一个突出特点: 对执行结果的描述远胜于执行过程.</p>
+<p>相对地, 命令式的特点是: 关注达成目标的具体过程.</p>
+<p>或许你还是很懵, 看下面的命令式编程例子.</p>
+<pre>
+const arr = ['h', 'e', 'l', 'l', 'o' ]
+for(let i = 0; i < arr.length; i++) {
+	arr[i] = arr[i].toUpperCase()
+}
+console.log(arr)
+</pre>
+<p>在上面的例子中, 包含了完成这个任务的整个过程, 即遍历整个数组并转换成大写.</p>
+<p>接下来看声明式编程如何完成.</p>
+<pre>
+const arr = ['h', 'e', 'l', 'l', 'o']
+const arrNew = arr.reduce((prev, cur) => 
+	prev += cur.toUpperCase(), '')
+console.log(arrNew)
+</pre>
+<p>对于上述代码, 我们之所以明白它发生了什么是由于看到 reduce 方法, 但具体遍历处理的细节被抽象封装到 reduce 内部, 我们并没有看到它循环遍历的过程.</p>
+<p>简单理解就是命令式代码的过程相当细节: 切块, 去籽, 扔进搅拌机, 而声明式代码描述的是具体结果: 西瓜, 榨成西瓜汁.</p>
+<p>因此声明式编程代码是可读性更强的, 因为我们并不在意榨成西瓜汁的细节. React 框架采用的就是声明式编程, render 函数调用来构建 DOM, 但 DOM 渲染的具体细节是被封装的. 虽然看不到细节, 但我们看到 render 方法就清楚地知道这是在渲染组件.</p>
+<h3 class="article-h3">2. JS 中的函数</h3>
+<p>JS 可以进行函数式编程, 这意味着变量可以做的事情, 函数也可以.</p>
+<p>是的, 接下来你需要谨记: “函数就是变量!”</p>
+<p>1.可以像声明变量那样去声明一个函数(函数表达式)</p>
+<pre>
+let fn = function(msg) {
+  console.log(msg)
+}
+</pre>
+<p>2.函数就是变量! 因此可以添加到对象中</p>
+<pre>
+const obj = {
+  msg: 'hello watermelon',
+  foo (msg) {
+    console.log(msg)
+  }
+}
+</pre>
+<p>3.函数就是变量! 因此可以添加到数组中</p>
+<pre>
+  const arr = [
+	'hello watermelon',
+	msg => console.log(msg),
+	'hello world'
+]
+
+arr[1](arr[0])	// hello watermelon
+</pre>
+<p>4.函数就是变量! 因此可以作为其他函数的参数传递</p>
+<pre>
+let foo = fn => fn('hello watermelon')
+foo(msg => console.log(msg))// hello watermelon
+</pre>
+<p>5.函数就是变量! 因此可以作为其他函数的执行结果返回</p>
+<p>看过以上介绍, 烟雨仔相信你开始有一点了解了.</p>
+<h3 class="article-h3">3.函数式编程的核心概念</h3>
+<p>函数式编程是声明式编程的一部分. 这部分偏理论, 以至于烟雨仔也有些迷惑…</p>
+<p><strong>不可变性</strong></p>
+<p>在函数式编程中, 数据不可变, 数据是无法被修改的. 这意味着不能修改原始数据, 只能进行拷贝编辑. 关于如何拷贝这里就不进行赘述.</p>
+<p><strong>纯函数</strong></p>
+<p>纯函数是一个返回结果只依赖输入参数的函数. 我们需要明确以下几点.</p>
+<p>1.纯函数至少需要接收一个参数, 并将参数当做不可变数据.</p>
+<p>2.总是返回一个值或其他函数.</p>
+<p>3.不会产生副作用, 即不会修改作用域外的变量.</p>
+<p>以下是一个非纯函数.</p>
+<pre>
+const person = {
+	name: 'mistrain',
+	age: 18,
+	hobby: 'watermelon'
+}
+function changeName() {
+	person.name = 'zongzi'
+	return person
+}
+changeName()
+console.log(person)
+// {name: 'zongzi', age: 18, hobby: 'watermelon'}
+</pre>
+<p>以上 changeName 函数是非纯函数. 它并没有接收参数, 也没有返回一个值或其他函数, 并且修改了作用域外数据 person.</p>
+<pre>
+const person = {
+    name: 'mistrain',
+    age: 18,
+    hobby: 'watermelon'
+}
+const newPerson = info => ({...info, name: 'zongzi'})
+// 扩展运算符, 并修改部分对象属性, 烟雨仔第一次用这种写法, 妙~
+console.log(newPerson(person))
+// {name: 'zongzi', age: 18, hobby: 'watermelon'}
+console.log(person)
+// {name: 'mistrain', age: 18, hobby: 'watermelon'}
+</pre>
+<p>以上是一个纯函数, 它实现了不改变 person, 并返回一个新的对象, 因此没有产生副作用.</p>
+<p><strong>数据转换</strong></p>
+<p>由于函数式编程中数据不可变性的存在, 有时往往需要将一种数据转换成另一种数据副本来使用. ES6提供了一些高阶函数使转换副本的代码更加简单.</p>
+<p><strong>高阶函数</strong></p>
+<p>1.第一类是 reduce, map, filter等, 它们都将函数作为参数进行传递.</p>
+<p>2.第二类是将函数作为返回值. 如柯里化(currying)就是通过在一个函数内返回另一个函数实现的.</p>
+<p>这里放一个问烂了的经典柯里化面试题, 在了解函数式编程后, 重新来看这个题相信你会有不一样的理解.</p>
+<pre>
+// 实现一个函数, 调用得到:
+fn(1) = 1
+fn(1, 2, 3) = 6
+fn(1)(2, 3)(4, 5, 6) = 21
+</pre>
+<p><strong>递归</strong></p>
+<p>鲁迅先生说: “不懂数据结构的前端也可以是好前端.”(烟雨仔瞎编的)相信你懂递归是怎么一回事, 即"自己调用自己". 这里烟雨仔也不赘述了.</p>
+<p><strong>一些废话</strong></p>
+<p>本篇是烟雨仔在学习《React 学习手册》时的一些笔记. 毕竟理论的东西就是很容易忘记, 但确实很有用~</p>
+<p>写得很浅, 不正确的地方望诸位大佬指正.</p>

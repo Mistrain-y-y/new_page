@@ -12,7 +12,7 @@ const Calen = props => {
     size="small" title="New Articles"
     extra={<span className="see-more" onClick={toBlog}>More</span>}
     style={{ width: '100%'}}>
-      <a href="/blog/detail"><p className="article-title">如何实现bilibili最新头部景深效果~炫酷</p></a>
+      <a href="/blog/detail/a03"><p className="article-title">如何实现bilibili最新头部景深效果~炫酷</p></a>
       <p className="article-title">JS 命令式 声明式 函数式 编程?</p>
       <p className="article-title">恐龙和恐龙的朋友们~</p>
     </Card>

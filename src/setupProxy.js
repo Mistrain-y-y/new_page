@@ -4,7 +4,7 @@ const {
 
 module.exports = function (app) {
   app.use(
-    // '/',
+    // '/',// 上传服务器
     '/blog/page',
     createProxyMiddleware({
       target: 'http://localhost:3030',
